@@ -44,10 +44,10 @@ async function create(review) {
     .then((createdRecords) => createdRecords[0]);
 }
 
-async function readReviews(review_id) {
+async function readReviews(movieId) {
 	return db(tableName)
 		.select("*")
-		.where({ review_id: review_id });
+		.where({ movie_id: movieId });
 }
 
 module.exports = {
